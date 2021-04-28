@@ -45,3 +45,10 @@ path2valdata - путь к валидационным маскам - str
 path2data - путь ко всем изображениям в 8 каналах - str
 
 ``` python3 script.py --radius 5 --eps 1e-5 --path2valdata '/home/masha/Kaggle/roscosmos-rucode/mask/mask/' --path2data '/home/masha/Kaggle/roscosmos-rucode/Images_composit/Images_composit/8_ch/' ```
+
+# OUTPUT:
+
+Замечание: Сохранение происходит в папку, из которой запускается скрипт.
+
+На выходе сохраняется всего 15 графиков - 5 валидационных масок, 5 масок полученных из базового решения, 5 масок полученных с помощью алгоритма из публикации в файлы с названиями соответственно "target_i.png", "difference_with_threhold_i.png", "sift_i.png" - где i от 0 до 4.
+А также сохраняется в submission_for_Kaggle.csv маска в формате, в котором она должна была подаваться в качестве решения на Kaggle для 41 пары фотографий из тестовой выборки.
