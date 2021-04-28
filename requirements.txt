@@ -1,5 +1,5 @@
-GDAL==3.2.1
-georaster==1.25
+#GDAL==3.2.1
+#georaster==1.25
 imageio==2.9.0
 matplotlib==3.3.2
 numpy==1.19.2
