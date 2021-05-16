@@ -47,7 +47,7 @@ path2data - путь ко всем изображениям в 8 каналах 
 
 Ниже можно ознакомиться с какими параметрами я запускала для решения этой задачи (параметры radius, eps были подобраны варьированием и данные параметры на датасете соревнования дают наилучший результат)
 
-``` python3 script.py --radius 5 --eps 1e-5 --path2valdata '/home/masha/Kaggle/roscosmos-rucode/mask/mask/' --path2data '/home/masha/Kaggle/roscosmos-rucode/Images_composit/Images_composit/8_ch/' ```
+``` python3 script.py --radius 5 --eps 1e-20 --path2valdata '/home/masha/Kaggle/roscosmos-rucode/mask/mask/' --path2data '/home/masha/Kaggle/roscosmos-rucode/Images_composit/Images_composit/8_ch/' ```
 
 Ниже приведена команда, которую нужно скопировать и применить в терминале, предварительно вставив на места <INSERT ...> ваши параметры скрипта. Прежде чем запускать скрипт в терминале, убедитесь, что Вы скачали данные сореванования по [ссылке](https://www.kaggle.com/c/roscosmos-rucode/data), а также проверьте что корректно задаёте полный путь к скачанным данным.
 
