@@ -35,6 +35,10 @@
 
 # Запуск скрипта на своей машине:
 
+Для того, чтобы перейти к запуску кода на своей машине, потребуется склонировать папку Code текущего репозитория к себе на локальную машину с помощью нижепредставленной команды в терминале, где потребуется на место <INSERT...> вставить название папки с проектом, которое Вам захочется:
+
+```git clone git@github.com:masha-astro/RosCosmos_Kaggle/Code.git <INSERT YOUR FOLDER NAME> && cd <INSERT YOUR FOLDER NAME>```
+
 Пример запуска на моей локальной машине, где переменные:
 
 radius - радиус окрестности ключевой точки, в которой рассматриваются совпадения и другие ключевые точки и далее считается NFA - int
@@ -45,7 +49,17 @@ path2valdata - путь к валидационным маскам - str
 
 path2data - путь ко всем изображениям в 8 каналах - str
 
-``` python3 script.py --radius 5 --eps 1e-5 --path2valdata '/home/masha/Kaggle/roscosmos-rucode/mask/mask/' --path2data '/home/masha/Kaggle/roscosmos-rucode/Images_composit/Images_composit/8_ch/' ```
+Ниже можно ознакомиться с какими параметрами я запускала для решения этой задачи (параметры radius, eps были подобраны варьированием и данные параметры на датасете соревнования дают наилучший результат)
+
+``` python3 script.py --radius 5 --eps 1e-20 --path2valdata '/home/masha/Kaggle/roscosmos-rucode/mask/mask/' --path2data '/home/masha/Kaggle/roscosmos-rucode/Images_composit/Images_composit/8_ch/' ```
+
+Ниже приведена команда, которую нужно скопировать и применить в терминале, предварительно вставив на места <INSERT ...> ваши параметры скрипта. Прежде чем запускать скрипт в терминале, убедитесь, что Вы скачали данные сореванования по [ссылке](https://www.kaggle.com/c/roscosmos-rucode/data), а также проверьте что корректно задаёте полный путь к скачанным данным.
+
+``` python3 script.py --radius <INSERT YOUR RADIUS INT VALUE> --eps <INSERT YOUR EPS FLOAT VALUE> --path2valdata <INSERT THE PATH TO THE VALIDATION MASKS> --path2data <INSERT THE PATH TO ALL THE DATA SET IMAGES IN 8 CHANNELS> ```
+
+После развертывания кода, проверьте его работоспособность с помощью тестов. Для этого выполните следующую команду в терминале, предварительно убедившись, что вы в папке Code данного проекта:
+
+``` pytest ./tests.py ```
 
 # OUTPUT:
 
