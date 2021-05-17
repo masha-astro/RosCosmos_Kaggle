@@ -53,6 +53,10 @@ path2data - путь ко всем изображениям в 8 каналах 
 
 ``` python3 script.py --radius <INSERT YOUR RADIUS INT VALUE> --eps <INSERT YOUR EPS FLOAT VALUE> --path2valdata <INSERT THE PATH TO THE VALIDATION MASKS> --path2data <INSERT THE PATH TO ALL THE DATA SET IMAGES IN 8 CHANNELS> ```
 
+После развертывания кода, проверьте его работоспособность с помощью тестов. Для этого выполните следующую команду в терминале, предварительно убедившись, что вы в папке Code данного проекта:
+
+``` pytest ./tests.py ```
+
 # OUTPUT:
 
 Замечание: Сохранение происходит в папку, из которой запускается скрипт.
